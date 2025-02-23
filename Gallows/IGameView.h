@@ -12,5 +12,6 @@ public:
 	virtual void WordGuessed() = 0;
 	virtual void GameOver() = 0;
 	virtual bool IsGameContinue() = 0;
+	virtual void HumanOutput(int mistakes) = 0;
 };
 

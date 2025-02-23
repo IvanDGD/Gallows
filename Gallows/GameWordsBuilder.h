@@ -10,20 +10,8 @@ private:
 	vector<string> buffer;
 	shared_ptr<WordsManager> manager;
 public:
-	GameWordsBuilder(const shared_ptr<WordsManager>& manager)
-		:manager(manager)
-	{
-		buffer = manager->GetWords();
-	}
+	GameWordsBuilder(const shared_ptr<WordsManager>& manager);
 
-	GameWord GetRandomWord()  
-	{
-		int rand_value = rand() % buffer.size();
-		auto&& first = buffer[rand_value];
-		GameWord result(first);
-
-		buffer.erase(buffer.begin() + rand_value);
-		return result;
-	}
+	GameWord GetRandomWord();
 };
 

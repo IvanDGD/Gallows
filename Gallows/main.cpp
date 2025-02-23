@@ -1,16 +1,12 @@
-#include <iostream>
-#include "ConsolGameView.h"
-#include "WordsManager.h"
-#include "Game.h"
+﻿#include <iostream>
+#include "MainMenu.h"
 
 int main() {
-	srand(time(0));
-    WordsManager manager;
+    srand(time(0));
+    MainMenu menu;
 
-	ConsolGameView consoleView;
+    menu.StartMenu();
 
-	Game game(std::make_shared<WordsManager>(manager), std::make_unique<ConsolGameView>(consoleView));
-	game.Start();
 
-	return 0;
+    return 0;
 }
